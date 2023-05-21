@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Unit Converter</title>
+  <h1>UNIT CONVERTER</h1>
+  <style>
+    .column {
+  float: center;
+  width: 45%;
+  background-color: pink;
+  margin-top: 80px;
+  border: 5px black double;
+  border-radius: 8px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+h1{
+  text-align: center;
+  margin-top: 50px;
+  text-decoration: underline;
+  color: yellow;
+
+}
+  </style>
+</head>
+<body style="background-color: #81d8d0; ">
+    <center>
+      <div class="row">
+    <p>
+  
+  <div class="column">
+  <input id="inputmillimeters" type="number" placeholder="Millimeters" oninput="forcm(this.value)" onchange="forcm(this.value)">
+  </p>
+  <p>Centimeters: <span id="outputcm"></span></p></div>
+
+<script>
+function forcm(valNum) {
+  document.getElementById("outputcm").innerHTML=valNum/10;
+}
+  </script>
+<div class="column">
+  <p>
+  <input id="inputmillimeters" type="number" placeholder="Millimeters" oninput="forme(this.value)" onchange="forme(this.value)">
+  </p>
+  <p>Meters: <span id="outputm"></span></p></div>
+
+<script>
+function forme(valNum) {
+  document.getElementById("outputm").innerHTML=valNum/1000;
+}
+
+  </script></div>
+  <div class= "column">
+  <p>
+  <input id="inputmillimeters" type="number" placeholder="Millimeters" oninput="forkm(this.value)" onchange="forkm(this.value)">
+  </p>
+  <p>Kilometers: <span id="outputkm"></span></p></div>
+
+<script>
+function forkm(valNum) {
+  document.getElementById("outputkm").innerHTML=valNum/1000000
+;
+}
+</script></p></p></div>
+</center>
+
+</body>
+</html>
